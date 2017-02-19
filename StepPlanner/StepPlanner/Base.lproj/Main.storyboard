@@ -38,7 +38,7 @@
         <!--Home-->
         <scene sceneID="qvi-7w-NbD">
             <objects>
-                <viewController id="wDs-Ht-IgP" sceneMemberID="viewController">
+                <viewController id="wDs-Ht-IgP" customClass="MainPage" customModule="StepPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0oL-dO-s54"/>
                         <viewControllerLayoutGuide type="bottom" id="Ipv-fI-8gZ"/>
@@ -51,6 +51,9 @@
                                 <rect key="frame" x="164" y="126" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="AddPlane:" destination="wDs-Ht-IgP" eventType="touchUpInside" id="8Q6-tF-6DZ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Plane" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nV-zr-8P8">
                                 <rect key="frame" x="148" y="97" width="78" height="21"/>
