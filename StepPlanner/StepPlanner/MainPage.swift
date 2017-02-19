@@ -10,13 +10,37 @@ import UIKit
 
 class MainPage: UIViewController {
     
-    @IBAction func AddPlane(_ sender: Any) {
+    var iFloorNum : Int = 0
+    
+    @IBOutlet var planeSetView: UIView!
+    
+    @IBOutlet var floorTxtField: UITextField!
+    
+    @IBAction func PlusfloorNum(_ sender: Any) {
+        iFloorNum = iFloorNum + 1
         
+        floorTxtField.text = iFloorNum.description
+    }
+    @IBAction func MinusfloorNum(_ sender: Any) {
+        iFloorNum = iFloorNum - 1
+        
+        if(iFloorNum < 0)
+        {
+            iFloorNum = 0
+        }
+        
+        floorTxtField.text = iFloorNum.description
+    }
+    
+    @IBAction func AddPlane(_ sender: Any) {
+        planeSetView.isHidden = false
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        planeSetView.isHidden = true
+        floorTxtField.text = "0"
         // Do any additional setup after loading the view.
     }
 
